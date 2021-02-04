@@ -103,7 +103,7 @@ void test_all_num() {
 
 double get_temperature() {
   double temp;
-  const int V = 4.6  // 理論上は5Vだが、計測結果から4.6Vとする
+  const int V = 4.6;  // 理論上は5Vだが、計測結果から4.6Vとする
   temp = (double)analogRead(PIN_TMP36)  / 1024;
   temp = temp * V; 
   temp = temp - 0.5; // TMP36のオフセットを引く
